@@ -13,7 +13,7 @@ importers:
         version: 3.0.0-3080720230703001(@dcloudio/types@3.3.2)(postcss@8.4.38)(vue@3.3.4)
       '@dcloudio/uni-app-plus':
         specifier: 3.0.0-3080720230703001
-        version: 3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3)(vue@3.3.4)
+        version: 3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)
       '@dcloudio/uni-components':
         specifier: 3.0.0-3080720230703001
         version: 3.0.0-3080720230703001(postcss@8.4.38)(vue@3.3.4)
@@ -77,16 +77,19 @@ importers:
         version: 3.0.0-3080720230703001
       '@dcloudio/vite-plugin-uni':
         specifier: 3.0.0-3080720230703001
-        version: 3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3)(vue@3.3.4)
+        version: 3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.1.0
-        version: 6.1.0(@typescript-eslint/parser@6.1.0)(eslint@8.45.0)(typescript@5.4.5)
+        version: 6.1.0(@typescript-eslint/parser@6.1.0(eslint@8.45.0)(typescript@5.4.5))(eslint@8.45.0)(typescript@5.4.5)
       '@typescript-eslint/parser':
         specifier: ^6.1.0
         version: 6.1.0(eslint@8.45.0)(typescript@5.4.5)
       '@uni-helper/uni-app-types':
         specifier: ^0.5.8
         version: 0.5.8(typescript@5.4.5)
+      '@unocss/transformer-compile-class':
+        specifier: ^0.63.4
+        version: 0.63.4
       '@vue/tsconfig':
         specifier: ^0.1.3
         version: 0.1.3(@types/node@20.12.11)
@@ -98,7 +101,7 @@ importers:
         version: 8.8.0(eslint@8.45.0)
       eslint-plugin-prettier:
         specifier: ^5.0.0
-        version: 5.0.0(eslint-config-prettier@8.8.0)(eslint@8.45.0)(prettier@3.0.0)
+        version: 5.0.0(@types/eslint@8.56.10)(eslint-config-prettier@8.8.0(eslint@8.45.0))(eslint@8.45.0)(prettier@3.0.0)
       eslint-plugin-vue:
         specifier: ^9.15.1
         version: 9.15.1(eslint@8.45.0)
@@ -125,13 +128,13 @@ importers:
         version: 5.4.5
       unocss:
         specifier: ^0.58.0
-        version: 0.58.0(postcss@8.4.38)(vite@4.5.3)
+        version: 0.58.0(postcss@8.4.38)(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))
       unocss-preset-weapp:
         specifier: ^0.57.1
-        version: 0.57.1
+        version: 0.57.1(rollup@3.29.4)
       unplugin-auto-import:
         specifier: ^0.16.6
-        version: 0.16.6
+        version: 0.16.6(rollup@3.29.4)
       vite:
         specifier: ^4.5.3
         version: 4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1)
@@ -1943,6 +1946,9 @@ packages:
   '@unocss/core@0.58.0':
     resolution: {integrity: sha512-KhABQXGE2AgtO9vE28d+HnciuyGDcuygsnQdUwlzUuR4K05OSw2kRE9emRN4HaMycD+gA/zDbQrJxTXb6mQUiA==}
 
+  '@unocss/core@0.63.4':
+    resolution: {integrity: sha512-VB4DJ5DsRWpX64si5tWYRXf1n5UkYQqe2s1V22qFiWmXa7Ec+Vf9s3cxWZmoWFC5P9RQiwM9kAqxdg1G+elVkQ==}
+
   '@unocss/extractor-arbitrary-variants@0.57.7':
     resolution: {integrity: sha512-JdyhPlsgS0x4zoF8WYXDcusPcpU4ysE6Rkkit4a9+xUZEvg7vy7InH6PQ8dL8B9oY7pbxF7G6eFguUDpv9xx4Q==}
 
@@ -2004,6 +2010,9 @@ packages:
 
   '@unocss/transformer-compile-class@0.58.0':
     resolution: {integrity: sha512-/BysfTg2q9sGPfiRHqWw/bT60/gjpBGBRVkIFsG4WVT2pgf3BfQUPu5FumSvZSRd0rA/pR57Lp6ZREAdj6+q+A==}
+
+  '@unocss/transformer-compile-class@0.63.4':
+    resolution: {integrity: sha512-ta6mqq2S5OWcfBzzYnaiMt3ekn2ECNZTqzzqMglnIKPkE+GmqUmmRavRnpc+NGobuqMRcI4F6x8MSSHf4MV0jw==}
 
   '@unocss/transformer-directives@0.58.0':
     resolution: {integrity: sha512-sU2U/aIykRkGGbA4Qo9Z5XE/KqWf7KhBwC1m8pUoqjawsZex4aVnQgXzDPfcjtmy6pElwK0z2U5DnO+OK9vCgQ==}
@@ -6161,7 +6170,7 @@ snapshots:
       '@commitlint/types': 19.0.3
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.4.5)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.12.11)(cosmiconfig@9.0.0)(typescript@5.4.5)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.12.11)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -6217,10 +6226,10 @@ snapshots:
 
   '@dcloudio/types@3.3.3': {}
 
-  '@dcloudio/uni-app-plus@3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3)(vue@3.3.4)':
+  '@dcloudio/uni-app-plus@3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)':
     dependencies:
       '@dcloudio/uni-app-uts': 3.0.0-3080720230703001(postcss@8.4.38)(vue@3.3.4)
-      '@dcloudio/uni-app-vite': 3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3)(vue@3.3.4)
+      '@dcloudio/uni-app-vite': 3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)
       '@dcloudio/uni-app-vue': 3.0.0-3080720230703001
       debug: 4.3.4
       fs-extra: 10.1.0
@@ -6256,14 +6265,14 @@ snapshots:
       - ts-node
       - vue
 
-  '@dcloudio/uni-app-vite@3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3)(vue@3.3.4)':
+  '@dcloudio/uni-app-vite@3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)':
     dependencies:
       '@dcloudio/uni-cli-shared': 3.0.0-3080720230703001(postcss@8.4.38)(vue@3.3.4)
       '@dcloudio/uni-i18n': 3.0.0-3080720230703001
       '@dcloudio/uni-nvue-styler': 3.0.0-3080720230703001
       '@dcloudio/uni-shared': 3.0.0-3080720230703001
       '@rollup/pluginutils': 4.2.1
-      '@vitejs/plugin-vue': 4.2.3(vite@4.5.3)(vue@3.3.4)
+      '@vitejs/plugin-vue': 4.2.3(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)
       '@vue/compiler-dom': 3.2.47
       '@vue/compiler-sfc': 3.2.47
       debug: 4.3.4
@@ -6654,7 +6663,7 @@ snapshots:
       - ts-node
       - vue
 
-  '@dcloudio/vite-plugin-uni@3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3)(vue@3.3.4)':
+  '@dcloudio/vite-plugin-uni@3.0.0-3080720230703001(postcss@8.4.38)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)':
     dependencies:
       '@babel/core': 7.22.9
       '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.22.9)
@@ -6662,9 +6671,9 @@ snapshots:
       '@dcloudio/uni-cli-shared': 3.0.0-3080720230703001(postcss@8.4.38)(vue@3.3.4)
       '@dcloudio/uni-shared': 3.0.0-3080720230703001
       '@rollup/pluginutils': 4.2.1
-      '@vitejs/plugin-legacy': 4.1.0(terser@5.19.1)(vite@4.5.3)
-      '@vitejs/plugin-vue': 4.2.3(vite@4.5.3)(vue@3.3.4)
-      '@vitejs/plugin-vue-jsx': 3.0.1(vite@4.5.3)(vue@3.3.4)
+      '@vitejs/plugin-legacy': 4.1.0(terser@5.19.1)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))
+      '@vitejs/plugin-vue': 4.2.3(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)
+      '@vitejs/plugin-vue-jsx': 3.0.1(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)
       '@vue/compiler-core': 3.2.47
       '@vue/compiler-dom': 3.2.47
       '@vue/compiler-sfc': 3.2.47
@@ -7134,23 +7143,23 @@ snapshots:
       core-js: 3.31.1
       tinycolor2: 1.6.0
 
-  '@jimp/plugin-contain@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)':
+  '@jimp/plugin-contain@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
       '@jimp/plugin-blit': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-resize': 0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-scale': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-scale': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-cover@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)':
+  '@jimp/plugin-cover@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
       '@jimp/plugin-crop': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-resize': 0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-scale': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-scale': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
@@ -7182,11 +7191,11 @@ snapshots:
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-flip@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-rotate@0.10.3)':
+  '@jimp/plugin-flip@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-rotate@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
-      '@jimp/plugin-rotate': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-rotate': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
@@ -7218,7 +7227,7 @@ snapshots:
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-print@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)':
+  '@jimp/plugin-print@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
@@ -7234,7 +7243,7 @@ snapshots:
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-rotate@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)':
+  '@jimp/plugin-rotate@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
@@ -7244,7 +7253,7 @@ snapshots:
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)':
+  '@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
@@ -7252,7 +7261,7 @@ snapshots:
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-shadow@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blur@0.10.3)(@jimp/plugin-resize@0.10.3)':
+  '@jimp/plugin-shadow@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blur@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
@@ -7261,7 +7270,7 @@ snapshots:
       '@jimp/utils': 0.10.3
       core-js: 3.31.1
 
-  '@jimp/plugin-threshold@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-color@0.10.3)(@jimp/plugin-resize@0.10.3)':
+  '@jimp/plugin-threshold@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-color@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))':
     dependencies:
       '@babel/runtime': 7.22.6
       '@jimp/custom': 0.10.3
@@ -7278,23 +7287,23 @@ snapshots:
       '@jimp/plugin-blur': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-circle': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-color': 0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-contain': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)
-      '@jimp/plugin-cover': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)
+      '@jimp/plugin-contain': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)))
+      '@jimp/plugin-cover': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)))
       '@jimp/plugin-crop': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-displace': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-dither': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-fisheye': 0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-flip': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-rotate@0.10.3)
+      '@jimp/plugin-flip': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-rotate@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)))
       '@jimp/plugin-gaussian': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-invert': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-mask': 0.10.3(@jimp/custom@0.10.3)
       '@jimp/plugin-normalize': 0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-print': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)
+      '@jimp/plugin-print': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))
       '@jimp/plugin-resize': 0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-rotate': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)
-      '@jimp/plugin-scale': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)
-      '@jimp/plugin-shadow': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blur@0.10.3)(@jimp/plugin-resize@0.10.3)
-      '@jimp/plugin-threshold': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-color@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-rotate': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
+      '@jimp/plugin-scale': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
+      '@jimp/plugin-shadow': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blur@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
+      '@jimp/plugin-threshold': 0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-color@0.10.3(@jimp/custom@0.10.3))(@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3))
       core-js: 3.31.1
       timm: 1.7.1
 
@@ -7409,17 +7418,21 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 2.3.1
 
-  '@rollup/pluginutils@5.0.2':
+  '@rollup/pluginutils@5.0.2(rollup@3.29.4)':
     dependencies:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
+      rollup: 3.29.4
 
-  '@rollup/pluginutils@5.1.0':
+  '@rollup/pluginutils@5.1.0(rollup@3.29.4)':
     dependencies:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
+      rollup: 3.29.4
 
   '@sinonjs/commons@1.8.6':
     dependencies:
@@ -7506,7 +7519,7 @@ snapshots:
     dependencies:
       '@types/yargs-parser': 21.0.3
 
-  '@typescript-eslint/eslint-plugin@6.1.0(@typescript-eslint/parser@6.1.0)(eslint@8.45.0)(typescript@5.4.5)':
+  '@typescript-eslint/eslint-plugin@6.1.0(@typescript-eslint/parser@6.1.0(eslint@8.45.0)(typescript@5.4.5))(eslint@8.45.0)(typescript@5.4.5)':
     dependencies:
       '@eslint-community/regexpp': 4.5.1
       '@typescript-eslint/parser': 6.1.0(eslint@8.45.0)(typescript@5.4.5)
@@ -7522,6 +7535,7 @@ snapshots:
       natural-compare-lite: 1.4.0
       semver: 7.5.4
       ts-api-utils: 1.0.1(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -7534,6 +7548,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.1.0
       debug: 4.3.4
       eslint: 8.45.0
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -7550,6 +7565,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.45.0
       ts-api-utils: 1.0.1(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -7565,6 +7581,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.4
       ts-api-utils: 1.0.1(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -7594,19 +7611,20 @@ snapshots:
       typescript: 5.4.5
       vue3: vue@3.3.4
 
-  '@unocss/astro@0.58.0(vite@4.5.3)':
+  '@unocss/astro@0.58.0(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))':
     dependencies:
       '@unocss/core': 0.58.0
       '@unocss/reset': 0.58.0
-      '@unocss/vite': 0.58.0(vite@4.5.3)
+      '@unocss/vite': 0.58.0(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))
+    optionalDependencies:
       vite: 4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1)
     transitivePeerDependencies:
       - rollup
 
-  '@unocss/cli@0.58.0':
+  '@unocss/cli@0.58.0(rollup@3.29.4)':
     dependencies:
       '@ampproject/remapping': 2.2.1
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
       '@unocss/config': 0.58.0
       '@unocss/core': 0.58.0
       '@unocss/preset-uno': 0.58.0
@@ -7629,6 +7647,8 @@ snapshots:
   '@unocss/core@0.57.7': {}
 
   '@unocss/core@0.58.0': {}
+
+  '@unocss/core@0.63.4': {}
 
   '@unocss/extractor-arbitrary-variants@0.57.7':
     dependencies:
@@ -7731,6 +7751,10 @@ snapshots:
     dependencies:
       '@unocss/core': 0.58.0
 
+  '@unocss/transformer-compile-class@0.63.4':
+    dependencies:
+      '@unocss/core': 0.63.4
+
   '@unocss/transformer-directives@0.58.0':
     dependencies:
       '@unocss/core': 0.58.0
@@ -7741,10 +7765,10 @@ snapshots:
     dependencies:
       '@unocss/core': 0.58.0
 
-  '@unocss/vite@0.58.0(vite@4.5.3)':
+  '@unocss/vite@0.58.0(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))':
     dependencies:
       '@ampproject/remapping': 2.2.1
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
       '@unocss/config': 0.58.0
       '@unocss/core': 0.58.0
       '@unocss/inspector': 0.58.0
@@ -7757,7 +7781,7 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  '@vitejs/plugin-legacy@4.1.0(terser@5.19.1)(vite@4.5.3)':
+  '@vitejs/plugin-legacy@4.1.0(terser@5.19.1)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))':
     dependencies:
       '@babel/core': 7.22.9
       '@babel/preset-env': 7.22.9(@babel/core@7.22.9)
@@ -7771,7 +7795,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue-jsx@3.0.1(vite@4.5.3)(vue@3.3.4)':
+  '@vitejs/plugin-vue-jsx@3.0.1(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)':
     dependencies:
       '@babel/core': 7.22.9
       '@babel/plugin-transform-typescript': 7.22.9(@babel/core@7.22.9)
@@ -7781,7 +7805,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@4.2.3(vite@4.5.3)(vue@3.3.4)':
+  '@vitejs/plugin-vue@4.2.3(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))(vue@3.3.4)':
     dependencies:
       vite: 4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1)
       vue: 3.3.4
@@ -7942,7 +7966,7 @@ snapshots:
   '@vue/shared@3.3.4': {}
 
   '@vue/tsconfig@0.1.3(@types/node@20.12.11)':
-    dependencies:
+    optionalDependencies:
       '@types/node': 20.12.11
 
   '@webassemblyjs/ast@1.12.1':
@@ -8442,7 +8466,7 @@ snapshots:
 
   core-js@3.31.1: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.12.11)(cosmiconfig@9.0.0)(typescript@5.4.5):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@20.12.11)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
       '@types/node': 20.12.11
       cosmiconfig: 9.0.0(typescript@5.4.5)
@@ -8455,6 +8479,7 @@ snapshots:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
+    optionalDependencies:
       typescript: 5.4.5
 
   cross-env@7.0.3:
@@ -8681,13 +8706,15 @@ snapshots:
     dependencies:
       eslint: 8.45.0
 
-  eslint-plugin-prettier@5.0.0(eslint-config-prettier@8.8.0)(eslint@8.45.0)(prettier@3.0.0):
+  eslint-plugin-prettier@5.0.0(@types/eslint@8.56.10)(eslint-config-prettier@8.8.0(eslint@8.45.0))(eslint@8.45.0)(prettier@3.0.0):
     dependencies:
       eslint: 8.45.0
-      eslint-config-prettier: 8.8.0(eslint@8.45.0)
       prettier: 3.0.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.5
+    optionalDependencies:
+      '@types/eslint': 8.56.10
+      eslint-config-prettier: 8.8.0(eslint@8.45.0)
 
   eslint-plugin-vue@9.15.1(eslint@8.45.0):
     dependencies:
@@ -9449,7 +9476,7 @@ snapshots:
       '@types/node': 20.12.11
 
   jest-pnp-resolver@1.2.3(jest-resolve@27.5.1):
-    dependencies:
+    optionalDependencies:
       jest-resolve: 27.5.1
 
   jest-regex-util@27.5.1: {}
@@ -10091,9 +10118,10 @@ snapshots:
   pinia@2.0.36(typescript@5.4.5)(vue@3.3.4):
     dependencies:
       '@vue/devtools-api': 6.5.0
-      typescript: 5.4.5
       vue: 3.3.4
       vue-demi: 0.14.5(vue@3.3.4)
+    optionalDependencies:
+      typescript: 5.4.5
 
   pirates@4.0.6: {}
 
@@ -10123,8 +10151,9 @@ snapshots:
   postcss-load-config@3.1.4(postcss@8.4.38):
     dependencies:
       lilconfig: 2.1.0
-      postcss: 8.4.38
       yaml: 1.10.2
+    optionalDependencies:
+      postcss: 8.4.38
 
   postcss-modules-extract-imports@3.0.0(postcss@8.4.38):
     dependencies:
@@ -10332,8 +10361,9 @@ snapshots:
   sass-loader@13.3.2(sass@1.63.6)(webpack@5.91.0):
     dependencies:
       neo-async: 2.6.2
-      sass: 1.63.6
       webpack: 5.91.0
+    optionalDependencies:
+      sass: 1.63.6
 
   sass@1.63.6:
     dependencies:
@@ -10658,9 +10688,9 @@ snapshots:
 
   unicorn-magic@0.1.0: {}
 
-  unimport@3.0.14:
+  unimport@3.0.14(rollup@3.29.4):
     dependencies:
-      '@rollup/pluginutils': 5.0.2
+      '@rollup/pluginutils': 5.0.2(rollup@3.29.4)
       escape-string-regexp: 5.0.0
       fast-glob: 3.3.0
       local-pkg: 0.4.3
@@ -10678,21 +10708,21 @@ snapshots:
 
   universalify@2.0.0: {}
 
-  unocss-preset-weapp@0.57.1:
+  unocss-preset-weapp@0.57.1(rollup@3.29.4):
     dependencies:
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
       '@unocss/core': 0.57.7
       '@unocss/extractor-arbitrary-variants': 0.57.7
       '@unocss/rule-utils': 0.57.7
-      unplugin-attributify-to-class: 0.2.5
-      unplugin-transform-class: 0.5.1
+      unplugin-attributify-to-class: 0.2.5(rollup@3.29.4)
+      unplugin-transform-class: 0.5.1(rollup@3.29.4)
     transitivePeerDependencies:
       - rollup
 
-  unocss@0.58.0(postcss@8.4.38)(vite@4.5.3):
+  unocss@0.58.0(postcss@8.4.38)(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1)):
     dependencies:
-      '@unocss/astro': 0.58.0(vite@4.5.3)
-      '@unocss/cli': 0.58.0
+      '@unocss/astro': 0.58.0(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))
+      '@unocss/cli': 0.58.0(rollup@3.29.4)
       '@unocss/core': 0.58.0
       '@unocss/extractor-arbitrary-variants': 0.58.0
       '@unocss/postcss': 0.58.0(postcss@8.4.38)
@@ -10710,7 +10740,8 @@ snapshots:
       '@unocss/transformer-compile-class': 0.58.0
       '@unocss/transformer-directives': 0.58.0
       '@unocss/transformer-variant-group': 0.58.0
-      '@unocss/vite': 0.58.0(vite@4.5.3)
+      '@unocss/vite': 0.58.0(rollup@3.29.4)(vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1))
+    optionalDependencies:
       vite: 4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1)
     transitivePeerDependencies:
       - postcss
@@ -10719,31 +10750,31 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-attributify-to-class@0.2.5:
+  unplugin-attributify-to-class@0.2.5(rollup@3.29.4):
     dependencies:
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
       unplugin: 1.5.1
-      unplugin-transform-class: 0.5.1
+      unplugin-transform-class: 0.5.1(rollup@3.29.4)
     transitivePeerDependencies:
       - rollup
 
-  unplugin-auto-import@0.16.6:
+  unplugin-auto-import@0.16.6(rollup@3.29.4):
     dependencies:
       '@antfu/utils': 0.7.5
-      '@rollup/pluginutils': 5.0.2
+      '@rollup/pluginutils': 5.0.2(rollup@3.29.4)
       fast-glob: 3.3.0
       local-pkg: 0.4.3
       magic-string: 0.30.1
       minimatch: 9.0.3
-      unimport: 3.0.14
+      unimport: 3.0.14(rollup@3.29.4)
       unplugin: 1.4.0
     transitivePeerDependencies:
       - rollup
 
-  unplugin-transform-class@0.5.1:
+  unplugin-transform-class@0.5.1(rollup@3.29.4):
     dependencies:
       '@meoc/utils': 0.2.8
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
       unplugin: 1.4.0
     transitivePeerDependencies:
       - rollup
@@ -10805,14 +10836,14 @@ snapshots:
 
   vite@4.5.3(@types/node@20.12.11)(sass@1.63.6)(terser@5.19.1):
     dependencies:
-      '@types/node': 20.12.11
       esbuild: 0.18.20
       postcss: 8.4.38
       rollup: 3.29.4
+    optionalDependencies:
+      '@types/node': 20.12.11
+      fsevents: 2.3.3
       sass: 1.63.6
       terser: 5.19.1
-    optionalDependencies:
-      fsevents: 2.3.3
 
   vue-demi@0.14.5(vue@3.3.4):
     dependencies:
