@@ -3,11 +3,11 @@
  * @Description:
  * @Date: 2024-10-20 10:57:10
  * @LastEditors: June
- * @LastEditTime: 2024-10-20 11:03:49
+ * @LastEditTime: 2025-01-28 13:42:16
  * @FilePath: /uniapp-template/uno.config.ts
  */
 import presetWeapp from 'unocss-preset-weapp'
-import { transformerDirectives } from 'unocss'
+import { transformerDirectives, transformerVariantGroup } from 'unocss'
 import {
   extractorAttributify,
   transformerClass
@@ -33,11 +33,15 @@ export default {
   ],
 
   transformers: [
+    // 启用 @apply 功能
     transformerDirectives(),
     transformerCompileClass(),
     // https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerAttributify
     transformerAttributify(),
     // https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerClass
-    transformerClass()
+    transformerClass(),
+    // 启用 () 分组功能
+    // 支持css class组合，eg: `<div class="hover:(bg-gray-400 font-medium) font-(light mono)">测试 unocss</div>`
+    transformerVariantGroup()
   ]
 }

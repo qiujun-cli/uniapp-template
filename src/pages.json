@@ -2,52 +2,16 @@
   "pages": [
     {
       "path": "pages/home/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "type": "page"
     },
     {
       "path": "pages/login/index",
-      "style": {
-        "navigationBarTitleText": "Login"
-      }
+      "type": "page"
     },
     {
       "path": "pages/mine/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
+      "type": "page"
     }
   ],
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
-  "tabBar": {
-    "backgroundColor": "#FFFFFF",
-    "selectedColor": "#165AFC",
-    "borderStyle": "white",
-    "list": [
-      {
-        "text": "首页",
-        "pagePath": "pages/home/index",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/mine/index",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png"
-      }
-    ]
-  },
-  "easycom": {
-    "autoscan": true,
-    "custom": {
-      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
-    }
-  }
+  "subPackages": []
 }
