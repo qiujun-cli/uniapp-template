@@ -1,4 +1,17 @@
 {
+  "globalStyle": {
+    "navigationStyle": "default",
+    "navigationBarTitleText": "unibest",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
+    }
+  },
   "pages": [
     {
       "path": "pages/home/index",
